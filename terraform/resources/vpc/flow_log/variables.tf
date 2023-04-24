@@ -21,7 +21,7 @@ variable "log_destination" {
 
 variable "log_destination_type" {
   description = "Type of the logging destination."
-  type        = bool
+  type        = string
   default     = "cloud-watch-logs"
 }
 

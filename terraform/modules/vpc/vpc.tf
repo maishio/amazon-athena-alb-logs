@@ -2,14 +2,14 @@ module "vpc" {
   source     = "../../resources/vpc/vpc"
   cidr_block = "10.0.0.0/16"
   tags       = var.tags
-  vpc_name   = "${var.tags.service}-${var.tags.env}-vpc"
+  name       = "${var.tags.service}-${var.tags.env}-vpc"
 }
 
 module "internet_gateway" {
-  source                = "../../resources/vpc/internet_gateway"
-  internet_gateway_name = "${var.tags.service}-${var.tags.env}-igw"
-  tags                  = var.tags
-  vpc_id                = module.vpc.vpc.id
+  source = "../../resources/vpc/internet_gateway"
+  name   = "${var.tags.service}-${var.tags.env}-igw"
+  tags   = var.tags
+  vpc_id = module.vpc.vpc.id
 }
 
 module "public_subnet" {
@@ -103,4 +103,18 @@ module "private_route_table_1c" {
       nat_gateway_id = module.nat_gateway.nat_gateway.1.id
     }
   ]
+}
+
+module "flow_log" {
+  source               = "../../resources/vpc/flow_log"
+  log_destination      = module.s3.s3_bucket.arn
+  log_destination_type = "s3"
+  name                 = "${var.tags.service}-${var.tags.env}-flow-log"
+  traffic_type         = "ALL"
+  tags                 = var.tags
+  vpc_id               = module.vpc.vpc.id
+
+  /* destination_options */
+  file_format        = "parquet"
+  per_hour_partition = true
 }

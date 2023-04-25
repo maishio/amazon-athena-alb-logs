@@ -2,5 +2,6 @@
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
 
 output "vpc" {
-  value = aws_vpc.this
+  description = "Amazon VPC resource."
+  value       = aws_vpc.this
 }

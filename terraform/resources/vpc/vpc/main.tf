@@ -6,5 +6,5 @@ resource "aws_vpc" "this" {
   enable_dns_support   = var.enable_dns_support
   enable_dns_hostnames = var.enable_dns_hostnames
   instance_tenancy     = var.instance_tenancy
-  tags                 = merge(var.tags, { "Name" = var.vpc_name })
+  tags                 = merge(var.tags, { "Name" = var.name })
 }

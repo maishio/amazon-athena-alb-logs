@@ -31,6 +31,11 @@ variable "log_group_name" {
   default     = null
 }
 
+variable "name" {
+  description = "Name of the flow log."
+  type        = string
+}
+
 variable "subnet_id" {
   description = "Subnet ID."
   type        = string

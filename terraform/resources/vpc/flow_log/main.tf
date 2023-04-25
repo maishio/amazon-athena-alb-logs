@@ -8,7 +8,7 @@ resource "aws_flow_log" "this" {
   log_destination_type          = var.log_destination_type
   log_group_name                = var.log_group_name
   subnet_id                     = var.subnet_id
-  tags                          = var.tags
+  tags                          = merge(var.tags, { "Name" = var.name })
   transit_gateway_attachment_id = var.transit_gateway_attachment_id
   transit_gateway_id            = var.transit_gateway_id
   traffic_type                  = var.traffic_type

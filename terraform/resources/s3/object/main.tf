@@ -4,6 +4,8 @@
 resource "aws_s3_object" "this" {
   bucket = var.bucket
   key    = var.key
-  source = var.source
+  /* rename soruce variable to path */
+  /* The variable name "source" is reserved due to its special meaning inside module blocks. */
+  source = var.path
   tags   = merge(var.tags, { "Name" = var.key })
 }

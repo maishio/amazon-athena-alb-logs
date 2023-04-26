@@ -11,7 +11,7 @@ variable "key" {
   type        = string
 }
 
-variable "source" {
+variable "path" {
   description = "Path to a file that will be read and uploaded as raw bytes for the object content."
   type        = string
   default     = null

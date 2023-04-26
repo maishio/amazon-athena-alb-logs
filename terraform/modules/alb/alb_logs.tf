@@ -10,7 +10,7 @@ module "alb_logs_lifecycle" {
   bucket = module.alb_logs.s3_bucket.bucket
   rule = [
     {
-      id     = "alb_logs"
+      id     = "alb"
       status = "Enabled"
       transition = [
         {

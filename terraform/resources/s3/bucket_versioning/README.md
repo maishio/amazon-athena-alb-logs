@@ -24,10 +24,10 @@ No modules.
 
 ## Inputs
 
-| Name                                                                                 | Description                                                                             | Type     | Default      | Required |
-| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | -------- | ------------ | :------: |
-| <a name="input_bucket"></a> [bucket](#input_bucket)                                  | Name of the bucket.                                                                     | `string` | n/a          |   yes    |
-| <a name="input_versioning_status"></a> [versioning_status](#input_versioning_status) | Versioning state of the bucket. Valid values are `Enabled`, `Suspended`, or `Disabled`. | `string` | `"Disabled"` |    no    |
+| Name                                                | Description                                                                             | Type     | Default      | Required |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------- | -------- | ------------ | :------: |
+| <a name="input_bucket"></a> [bucket](#input_bucket) | Name of the bucket.                                                                     | `string` | n/a          |   yes    |
+| <a name="input_status"></a> [status](#input_status) | Versioning state of the bucket. Valid values are `Enabled`, `Suspended`, or `Disabled`. | `string` | `"Disabled"` |    no    |
 
 ## Outputs
 

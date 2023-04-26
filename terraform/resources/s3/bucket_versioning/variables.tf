@@ -6,7 +6,7 @@ variable "bucket" {
   type        = string
 }
 
-variable "versioning_status" {
+variable "status" {
   description = "Versioning state of the bucket. Valid values are `Enabled`, `Suspended`, or `Disabled`."
   type        = string
   default     = "Disabled"

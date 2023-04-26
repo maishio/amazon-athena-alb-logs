@@ -7,7 +7,7 @@ module "alb" {
   tags            = var.tags
   access_logs = [
     {
-      bucket  = module.s3.s3_bucket.id
+      bucket  = module.alb_logs.s3_bucket.id
       enabled = true
       prefix  = "alb/${var.tags.service}-${var.tags.env}-alb"
     }

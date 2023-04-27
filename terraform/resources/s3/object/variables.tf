@@ -6,6 +6,12 @@ variable "bucket" {
   type        = string
 }
 
+variable "content_type" {
+  description = "Standard MIME type describing the format of the object data."
+  type        = string
+  default     = "application/octet-stream"
+}
+
 variable "key" {
   description = "Name of the object once it is in the bucket."
   type        = string

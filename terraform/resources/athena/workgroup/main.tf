@@ -23,7 +23,7 @@ resource "aws_athena_workgroup" "this" {
 
       encryption_configuration {
         encryption_option = var.encryption_option
-        kms_key           = var.kms_key
+        kms_key_arn       = var.kms_key_arn
       }
     }
   }

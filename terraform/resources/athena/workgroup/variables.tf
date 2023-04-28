@@ -81,7 +81,7 @@ variable "encryption_option" {
   type        = string
 }
 
-variable "kms_key" {
+variable "kms_key_arn" {
   description = "ARN of the KMS key that is used to encrypt query results."
   type        = string
   default     = null

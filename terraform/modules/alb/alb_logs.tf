@@ -7,7 +7,7 @@ module "alb_logs" {
 
 module "alb_logs_lifecycle" {
   source = "../../resources/s3/bucket_lifecycle_configuration"
-  bucket = module.alb_logs.s3_bucket.bucket
+  bucket = module.alb_logs.s3_bucket.id
   rule = [
     {
       id     = "alb"
@@ -29,7 +29,7 @@ module "alb_logs_lifecycle" {
 
 module "alb_logs_policy" {
   source = "../../resources/s3/bucket_policy"
-  bucket = module.alb_logs.s3_bucket.bucket
+  bucket = module.alb_logs.s3_bucket.id
   path   = "${path.module}/files/template/alb_s3_bucket_policy.json.tpl"
   vars = {
     ACCOUNT = data.aws_elb_service_account.this.arn

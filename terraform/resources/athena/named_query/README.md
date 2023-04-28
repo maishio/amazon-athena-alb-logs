@@ -31,6 +31,7 @@ No modules.
 | <a name="input_name"></a> [name](#input_name)                      | Name of the query.                               | `string`      | n/a                      |   yes    |
 | <a name="input_path"></a> [path](#input_path)                      | Path to the query file.                          | `string`      | n/a                      |   yes    |
 | <a name="input_vars"></a> [vars](#input_vars)                      | Map of variables to be passed to the query file. | `map(string)` | `{}`                     |    no    |
+| <a name="input_workgroup"></a> [workgroup](#input_workgroup)       | Workgroup to which the query belongs.            | `string`      | `"primary"`              |    no    |
 
 ## Outputs
 

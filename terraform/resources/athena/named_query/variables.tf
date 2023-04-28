@@ -27,3 +27,9 @@ variable "vars" {
   type        = map(string)
   default     = {}
 }
+
+variable "workgroup" {
+  description = "Workgroup to which the query belongs."
+  type        = string
+  default     = "primary"
+}

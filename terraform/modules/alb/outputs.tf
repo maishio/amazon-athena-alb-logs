@@ -7,3 +7,8 @@ output "alb_logs_bucket_id" {
   description = "ID of the ALB log bucket."
   value       = module.alb_logs.s3_bucket.id
 }
+
+output "waf_logs_bucket_id" {
+  description = "ID of the WAFv2 log bucket."
+  value       = module.waf_logs.s3_bucket.id
+}

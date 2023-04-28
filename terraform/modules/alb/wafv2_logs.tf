@@ -10,7 +10,7 @@ module "waf_logs_lifecycle" {
   bucket = module.waf_logs.s3_bucket.id
   rule = [
     {
-      id     = "wafv2_logs"
+      id     = "waf_logs"
       status = "Enabled"
       transition = [
         {

@@ -35,9 +35,7 @@ make exec
 
 http://localhost:8000 にアクセスして サンプルアプリケーションが表示されることを確認します。
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44653717/232705954-551392dc-deb5-40a9-90af-697e30cccc3a.png" />
-</div>
+![image](https://user-images.githubusercontent.com/44653717/235288684-117dafba-95e2-4180-a52a-a66efa0d221f.png)
 
 ## サンプルアプリケーションを Amazon ECR にプッシュする
 
@@ -49,7 +47,7 @@ http://localhost:8000 にアクセスして サンプルアプリケーション
 aws configure
 ```
 
-２. [Makefile](app/Makefile) の環境変数を自分の環境に合わせて設定してください。
+２. [Makefile](Makefile) の環境変数を自分の環境に合わせて設定してください。
 
 ```Makefile
 ACCOUNT := 123456789012

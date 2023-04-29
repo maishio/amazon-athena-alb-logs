@@ -26,8 +26,7 @@
 ## Architecture
 
 <div align="center">
-  <img src="
-https://user-images.githubusercontent.com/44653717/235289702-65fb3c1c-a1ad-4584-a32a-88c0711eefac.png" />
+  <img src="https://user-images.githubusercontent.com/44653717/235289702-65fb3c1c-a1ad-4584-a32a-88c0711eefac.png" />
 </div>
 
 ## 事前準備

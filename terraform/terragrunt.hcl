@@ -27,7 +27,7 @@ EOF
 remote_state {
   backend = "s3"
   config = {
-    bucket  = "log-analysis-using-athena-tfstate-${local.aws_account_id}"
+    bucket  = "amazon-athena-alb-logs-${local.aws_account_id}"
     encrypt = true
     key     = "tfstate/${local.service}/${local.env}/${basename(get_terragrunt_dir())}.tfstate"
     region  = local.aws_region_id

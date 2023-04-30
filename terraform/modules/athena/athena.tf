@@ -20,7 +20,7 @@ module "alb_logs_named_query" {
   source      = "../../resources/athena/named_query"
   database    = module.alb_logs_database.athena_database.id
   description = "Athena named query for ALB logs"
-  name        = "alb_logs"
+  name        = "create_alb_logs_table"
   path        = "${path.module}/files/template/create_alb_logs_table.sql.tpl"
   vars = {
     ACCOUNT            = var.account.id
